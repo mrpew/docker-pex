@@ -29,10 +29,15 @@ case "$1" in
     push)
         push_images
         ;;
+    bush)
+        build_images
+        push_images
+        ;;
     *)
         echo "${0}: invalid argument ${1}"
         echo "     build => build images"
         echo "     push  => push images"
+        echo "     bush  => .. both"
         echo "     set target repository via DOCKER_REPO env var"
         ;;
 esac
